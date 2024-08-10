@@ -1,1 +1,20 @@
+const nome = "Terapallo";
 
+const xpLista = [500, 1500, 3000, 6000, 7500, 8500, 9500, 11000];
+
+const classificarNivel = (xp) => {
+    if (xp < 1000) return "Ferro";
+    if (xp <= 2000) return "Bronze";
+    if (xp <= 5000) return "Prata";
+    if (xp <= 7000) return "Ouro";
+    if (xp <= 8000) return "Platina";
+    if (xp <= 9000) return "Ascendente";
+    if (xp <= 10000) return "Imortal";
+    return "Radiante";
+};
+
+for (let i = 0; i < xpLista.length; i++) {
+    const xp = xpLista[i];
+    const nivel = classificarNivel(xp);
+    console.log(`O Herói de nome ${nome} com XP de ${xp} está no nível de ${nivel}`);
+}
